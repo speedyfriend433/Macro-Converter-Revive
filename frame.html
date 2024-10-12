@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+            text-align: left;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="select-from">From</label>
+        <select id="select-from">
+            <option value="txt">Plain Text</option>
+            <option selected="selected" value="zbf">zBot Frame</option>
+            <option value="xbot-frame">xBot Frame</option>
+            <option value="replaybot">ReplayBot</option>
+            <option value="tasbot-f">TASBOT</option>
+            <option value="ybot-frame">yBot Frame</option>
+            <option value="echof">Echo</option>
+            <option value="url-f">Universal Replay</option>
+            <option value="rush">Rush</option>
+            <option value="kdbot">KD-Bot Frame</option>
+            <option value="mhrjson">MHR Json</option>
+        </select>
+
+        <br>
+
+        <label for="select-to">To</label>
+        <select id="select-to">
+            <option selected="selected" value="txt">Plain Text</option>
+            <option value="zbf">zBot Frame</option>
+            <option value="xbot-frame">xBot Frame</option>
+            <option value="replaybotf">ReplayBot</option>
+            <option value="tasbot-f">TASBOT</option>
+            <option value="ybot-frame">yBot Frame</option>
+            <option value="echof">Echo</option>
+            <option value="url-f">Universal Replay</option>
+            <option value="rush">Rush</option>
+            <option value="kdbot">KD-Bot Frame</option>
+            <option value="mhrjson">MHR Json</option>
+        </select>
+
+        <br>
+
+        <label>
+            <input type="checkbox" id="chk-clean" checked>
+            Clean replay (removes redundant actions)
+        </label>
+
+        <br>
+
+        <button id="btn-convert">Convert</button>
+        <button id="btn-offset-frames">Offset Frames</button>
+        <button id="btn-remove-p1">Remove all Player 1 inputs</button>
+        <button id="btn-remove-p2">Remove all Player 2 inputs</button>
+        <button id="btn-flip-hold">Flip hold ⟷ release</button>
+        <button id="btn-flip-player">Flip player 1 ⟷ player 2</button>
+        <button id="btn-sort-inputs">Sort inputs by frame</button>
+        <p class="footer-text">Ui Made by speedyfriend67</p>
+
+        <br>
+        <textarea id="textarea" cols="40" rows="10" disabled></textarea>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
+
